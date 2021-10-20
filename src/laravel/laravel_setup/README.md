@@ -9,7 +9,7 @@ Laravel で開発をするためには，開発環境を用意する必要があ
 - ローカル環境（XAMPP など）
 - ローカル上の仮想マシン（vagrant など）
 - 仮想コンテナ（Docker など）
-- クラウド上の仮想マシン（AWS Cloud9 など）
+- クラウド上の仮想マシン（AWS Cloud9，Paiza Cloud など）
 
 今回は Paiza Cloud が提供するクラウド環境を用いて開発を行う．
 
