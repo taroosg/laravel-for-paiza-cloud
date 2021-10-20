@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>必要な画面の作成と動作確認 - laravel-for-paiza-cloud</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/index.html"><strong aria-hidden="true">1.</strong> Laravel 事前準備</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/setup-for-paiza-cloud.html"><strong aria-hidden="true">1.1.</strong> 【Paiza Cloud 編】環境構築</a></li></ol></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/index.html"><strong aria-hidden="true">2.</strong> Laravel 01</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/laravel01/about-laravel-and-mvc.html"><strong aria-hidden="true">2.1.</strong> Laravel と MVC フレームワーク</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/add-laravel-breeze.html"><strong aria-hidden="true">2.2.</strong> ライブラリ準備</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/migration.html"><strong aria-hidden="true">2.3.</strong> マイグレーションによるテーブル作成</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/route-and-controller.html"><strong aria-hidden="true">2.4.</strong> ルーティングとコントローラ</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/views.html" class="active"><strong aria-hidden="true">2.5.</strong> 必要な画面の作成と動作確認</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/create.html"><strong aria-hidden="true">2.6.</strong> tweet 作成処理の実装</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/read.html"><strong aria-hidden="true">2.7.</strong> tweet 一覧画面の実装</a></li></ol></li><li class="chapter-item expanded "><a href="../../laravel/laravel02/index.html"><strong aria-hidden="true">3.</strong> Laravel 02</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/laravel02/show.html"><strong aria-hidden="true">3.1.</strong> tweet 詳細画面の実装</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel02/delete.html"><strong aria-hidden="true">3.2.</strong> tweet 削除処理の実装</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel02/update.html"><strong aria-hidden="true">3.3.</strong> tweet 更新処理の実装</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel02/auth.html"><strong aria-hidden="true">3.4.</strong> tweet とユーザ認証の連携</a></li></ol></li><li class="chapter-item expanded "><a href="../../laravel/laravel03/index.html"><strong aria-hidden="true">4.</strong> Laravel 03</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/laravel03/mypage.html"><strong aria-hidden="true">4.1.</strong> マイページ機能の実装（1 対多のデータ）</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel03/auther.html"><strong aria-hidden="true">4.2.</strong> 投稿者名の表示（多対 1 のデータ）</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel03/favorite01.html"><strong aria-hidden="true">4.3.</strong> Favorite 機能 1（多対多のデータ・中間テーブル）</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel03/favorite02.html"><strong aria-hidden="true">4.4.</strong> Favorite 機能 2（各処理の実装）</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">laravel-for-paiza-cloud</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="必要な画面の作成と動作確認"><a class="header" href="#必要な画面の作成と動作確認">必要な画面の作成と動作確認</a></h1>
+<h2 id="共通画面の作成"><a class="header" href="#共通画面の作成">共通画面の作成</a></h2>
+<p>実際にブラウザ画面に表示される内容を記述する．ビューファイルは<code>*.blade.php</code>の形式で作成する．これは「blade テンプレート」と呼ばれる形式であり，コントローラとのデータのやり取りなどに最適化されている．</p>
+<p><strong>ビューファイルは<code>latavel_tweet/resources/views</code>ディレクトリ以下に配置する．</strong></p>
+<p>blade テンプレートでは共通パーツと個別パーツを組み合わせて画面を構成する．例えば，アプリケーション全体を通して表示されるナビゲーションバーやエラー画面などは共通パーツである．</p>
+<p>それぞれのパーツは「コンポーネント」と呼ばれる．</p>
+<h2 id="共通パーツエラー表示の作成"><a class="header" href="#共通パーツエラー表示の作成">共通パーツ（エラー表示）の作成</a></h2>
+<p>入力値が不正な場合などはエラー画面を表示して対応する．</p>
+<p>tweet の入力や編集など複数の画面で必要となるため，共通のコンポーネントとして作成する．</p>
+<p><code>latavel_tweet/resources/views</code>の中に<code>common</code>ディレクトリを作成する．
+<code>common</code>ディレクトリの中に<code>errors.blade.php</code>ファイルを作成する．</p>
+<p><code>errors.blade.php</code>に以下の内容を記述する．</p>
+<pre><code class="language-php">@if (count($errors) &gt; 0)
+&lt;div&gt;
+  &lt;div class=&quot;font-medium text-red-600&quot;&gt;
+    {{ __('Whoops! Something went wrong.') }}
+  &lt;/div&gt;
+
+  &lt;ul class=&quot;mt-3 list-disc list-inside text-sm text-red-600&quot;&gt;
+    @foreach ($errors-&gt;all() as $error)
+    &lt;li&gt;{{ $error }}&lt;/li&gt;
+    @endforeach
+  &lt;/ul&gt;
+&lt;/div&gt;
+@endif
+
+</code></pre>
+<h2 id="共通パーツナビゲーションバーの調整"><a class="header" href="#共通パーツナビゲーションバーの調整">共通パーツ（ナビゲーションバー）の調整</a></h2>
+<p>ナビゲーションバーもアプリケーションを通じて使用するため，共通パーツとして作成する．</p>
+<p>「tweet 一覧」と「tweet 作成」の 2 種類のリンクを作成しておく．</p>
+<p><code>resources/views/layouts/navigation.blade.php</code>の内容を以下のように編集する．</p>
+<p>全部で 4 箇所追記があるので注意．長いので全コピペ推奨．</p>
+<pre><code class="language-php">&lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white border-b border-gray-100&quot;&gt;
+  &lt;!-- Primary Navigation Menu --&gt;
+  &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+    &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+      &lt;div class=&quot;flex&quot;&gt;
+        &lt;!-- Logo --&gt;
+        &lt;div class=&quot;flex-shrink-0 flex items-center&quot;&gt;
+          &lt;a href=&quot;{{ route('dashboard') }}&quot;&gt;
+            &lt;x-application-logo class=&quot;block h-10 w-auto fill-current text-gray-600&quot; /&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Navigation Links --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('dashboard')&quot; :active=&quot;request()-&gt;routeIs('dashboard')&quot;&gt;
+            {{ __('Dashboard') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+        &lt;!-- 🔽 一覧ページへのリンクを追加 --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('tweet.index')&quot; :active=&quot;request()-&gt;routeIs('tweet.index')&quot;&gt;
+            {{ __('Index') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+        &lt;!-- 🔽 作成ページへのリンクを追加 --&gt;
+        &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ml-10 sm:flex&quot;&gt;
+          &lt;x-nav-link :href=&quot;route('tweet.create')&quot; :active=&quot;request()-&gt;routeIs('tweet.create')&quot;&gt;
+            {{ __('Create') }}
+          &lt;/x-nav-link&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Settings Dropdown --&gt;
+      &lt;div class=&quot;hidden sm:flex sm:items-center sm:ml-6&quot;&gt;
+        &lt;x-dropdown align=&quot;right&quot; width=&quot;48&quot;&gt;
+          &lt;x-slot name=&quot;trigger&quot;&gt;
+            &lt;button class=&quot;flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out&quot;&gt;
+              &lt;div&gt;{{ Auth::user()-&gt;name }}&lt;/div&gt;
+
+              &lt;div class=&quot;ml-1&quot;&gt;
+                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                  &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                &lt;/svg&gt;
+              &lt;/div&gt;
+            &lt;/button&gt;
+          &lt;/x-slot&gt;
+
+          &lt;x-slot name=&quot;content&quot;&gt;
+            &lt;!-- Authentication --&gt;
+            &lt;form method=&quot;POST&quot; action=&quot;{{ route('logout') }}&quot;&gt;
+              @csrf
+
+              &lt;x-dropdown-link :href=&quot;route('logout')&quot; onclick=&quot;event.preventDefault();
+                                                this.closest('form').submit();&quot;&gt;
+                {{ __('Logout') }}
+              &lt;/x-dropdown-link&gt;
+            &lt;/form&gt;
+          &lt;/x-slot&gt;
+        &lt;/x-dropdown&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Hamburger --&gt;
+      &lt;div class=&quot;-mr-2 flex items-center sm:hidden&quot;&gt;
+        &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out&quot;&gt;
+          &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+            &lt;path :class=&quot;{'hidden': open, 'inline-flex': ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+            &lt;path :class=&quot;{'hidden': ! open, 'inline-flex': open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Responsive Navigation Menu --&gt;
+  &lt;div :class=&quot;{'block': open, 'hidden': ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('dashboard')&quot; :active=&quot;request()-&gt;routeIs('dashboard')&quot;&gt;
+        {{ __('Dashboard') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+    &lt;!-- 🔽 一覧ページへのリンクを追加 --&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('tweet.index')&quot; :active=&quot;request()-&gt;routeIs('tweet.index')&quot;&gt;
+        {{ __('Index') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+    &lt;!-- 🔽 作成ページへのリンクを追加 --&gt;
+    &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+      &lt;x-responsive-nav-link :href=&quot;route('tweet.create')&quot; :active=&quot;request()-&gt;routeIs('tweet.create')&quot;&gt;
+        {{ __('Create') }}
+      &lt;/x-responsive-nav-link&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Settings Options --&gt;
+    &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200&quot;&gt;
+      &lt;div class=&quot;flex items-center px-4&quot;&gt;
+        &lt;div class=&quot;flex-shrink-0&quot;&gt;
+          &lt;svg class=&quot;h-10 w-10 fill-current text-gray-400&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;
+            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;ml-3&quot;&gt;
+          &lt;div class=&quot;font-medium text-base text-gray-800&quot;&gt;{{ Auth::user()-&gt;name }}&lt;/div&gt;
+          &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;{{ Auth::user()-&gt;email }}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+        &lt;!-- Authentication --&gt;
+        &lt;form method=&quot;POST&quot; action=&quot;{{ route('logout') }}&quot;&gt;
+          @csrf
+
+          &lt;x-responsive-nav-link :href=&quot;route('logout')&quot; onclick=&quot;event.preventDefault();
+                                        this.closest('form').submit();&quot;&gt;
+            {{ __('Logout') }}
+          &lt;/x-responsive-nav-link&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li>Laravel8 のビューは CSS フレームワークの<code>tailwind.css</code>を使用している．</li>
+<li>予め用意されたクラス名を記述するだけでスタイルを適用できるので，ドキュメントを読みながらスタイルを変更してみよう．</li>
+</ul>
+</blockquote>
+<p>画面をリロードすると下記のようにナビゲーションが設置された状態となる（一覧ページと作成ページはまだ作成していないので動作しない点に注意）．</p>
+<p><img src="./img/laratter_logged_in.png" alt="ナビゲーション設置" /></p>
+<h2 id="tweet-作成画面の作成"><a class="header" href="#tweet-作成画面の作成">tweet 作成画面の作成</a></h2>
+<p>まず，<code>resources/views</code>の中に<code>tweet</code>ディレクトリを作成する．</p>
+<p>続いて，<code>tweet</code>ディレクトリの中に以下のファイルを作成する．今後必要になる画面のファイルも合わせて作成している．</p>
+<ul>
+<li><code>index.blade.php</code>（tweet 一覧画面）</li>
+<li><code>create.blade.php</code>（tweet 作成画面）</li>
+<li><code>show.blade.php</code>（tweet 詳細画面）</li>
+<li><code>edit.blade.php</code>（tweet 編集画面）</li>
+</ul>
+<p>ファイルを作成したら<code>create.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;!-- resources/views/tweet/create.blade.php --&gt;
+
+&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Create New Tweet') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-8/12 md:w-1/2 lg:w-5/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          @include('common.errors')
+          &lt;form class=&quot;mb-6&quot; action=&quot;{{ route('tweet.store') }}&quot; method=&quot;POST&quot;&gt;
+            @csrf
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;tweet&quot;&gt;Tweet&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;tweet&quot; id=&quot;tweet&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col mb-4&quot;&gt;
+              &lt;label class=&quot;mb-2 uppercase font-bold text-lg text-grey-darkest&quot; for=&quot;description&quot;&gt;Description&lt;/label&gt;
+              &lt;input class=&quot;border py-2 px-3 text-grey-darkest&quot; type=&quot;text&quot; name=&quot;description&quot; id=&quot;description&quot;&gt;
+            &lt;/div&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none&quot;&gt;
+              Create
+            &lt;/button&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>route('tweet.store')</code>は<code>TweetController</code>の<code>store()</code>関数にデータを送ることを示している．</li>
+<li><code>@csrf</code>はセキュリティ対策．フォームからデータを送信するときには必ず記述すること．</li>
+</ul>
+</blockquote>
+<h2 id="動作確認作成画面"><a class="header" href="#動作確認作成画面">動作確認（作成画面）</a></h2>
+<p>編集したらブラウザから<code>localhost/tweet/create</code>にアクセスして動作確認．
+下記画面になっていれば OK．</p>
+<p><img src="./img/laratter_create.png" alt="tweet作成画面" /></p>
+<h2 id="tweet-一覧画面の作成"><a class="header" href="#tweet-一覧画面の作成">tweet 一覧画面の作成</a></h2>
+<p>続いて，<code>index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;!-- resources/views/tweet/index.blade.php --&gt;
+
+&lt;x-app-layout&gt;
+  &lt;x-slot name=&quot;header&quot;&gt;
+    &lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;
+      {{ __('Tweet Index') }}
+    &lt;/h2&gt;
+  &lt;/x-slot&gt;
+
+  &lt;div class=&quot;py-12&quot;&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto sm:w-10/12 md:w-8/10 lg:w-8/12&quot;&gt;
+      &lt;div class=&quot;bg-white overflow-hidden shadow-sm sm:rounded-lg&quot;&gt;
+        &lt;div class=&quot;p-6 bg-white border-b border-gray-200&quot;&gt;
+          &lt;table class=&quot;text-center w-full border-collapse&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light&quot;&gt;tweet&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              @foreach ($tweets as $tweet)
+              &lt;tr class=&quot;hover:bg-grey-lighter&quot;&gt;
+                &lt;td class=&quot;py-4 px-6 border-b border-grey-light&quot;&gt;
+                  &lt;h3 class=&quot;text-left font-bold text-lg text-grey-dark&quot;&gt;{{$tweet-&gt;tweet}}&lt;/h3&gt;
+                  &lt;div class=&quot;flex&quot;&gt;
+                    &lt;!-- 更新ボタン --&gt;
+                    &lt;!-- 削除ボタン --&gt;
+                  &lt;/div&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              @endforeach
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/x-app-layout&gt;
+
+</code></pre>
+<p>こちらはエラーが発生する．</p>
+<p><img src="./img/laratter_index_error.png" alt="一覧画面のエラー" /></p>
+<p>コントローラから<code>$tweets</code>という名前でデータを受け取るよう記述しているが，コントローラからデータが送られていないためである．</p>
+<p>とりあえず空のデータを送るように<code>app/Http/Controllers/TweetController.php</code>の<code>index()</code>を内容を以下のように編集する．</p>
+<blockquote>
+<p>【解説】</p>
+<ul>
+<li><code>view()</code>関数の第 2 引数に渡したいデータを配列で記述する．</li>
+<li>ここでは「<code>tweets</code>」という名前で「空の配列」を送っている．</li>
+<li>ビューファイル側では<code>$tweets</code>とすることで渡されたデータを使うことができる．</li>
+<li>また，変数などのデータは<code>var_dump()</code>または<code>dd()</code>または<code>ddd()</code>で確認することができる．これらを使ってデータの構造を確認しながら進めると良いだろう．</li>
+</ul>
+</blockquote>
+<pre><code class="language-php">// app/Http/Controllers/TweetController.php
+
+public function index()
+{
+  // 🔽 編集
+  return view('tweet.index', [
+    'tweets' =&gt; []
+  ]);
+}
+
+</code></pre>
+<h2 id="動作確認"><a class="header" href="#動作確認">動作確認</a></h2>
+<p>編集したらブラウザから<code>localhost/tweet</code>にアクセスして動作確認．
+下記画面になっていれば OK．</p>
+<p><img src="./img/laratter_index_empty.png" alt="一覧画面" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../laravel/laravel01/route-and-controller.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../laravel/laravel01/create.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../laravel/laravel01/route-and-controller.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../laravel/laravel01/create.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
