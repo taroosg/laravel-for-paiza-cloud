@@ -35,11 +35,12 @@
   - [Favorite 機能 1（多対多のデータ・中間テーブル）](./laravel/laravel03/favorite01.md)
   - [Favorite 機能 2（各処理の実装）](./laravel/laravel03/favorite02.md)
 
-<!-- - [デプロイ](./laravel/deploy/README.md) -->
+- [GitHub へ push](./laravel/laravel03/github-push.md)
+  <!-- - [デプロイ](./laravel/deploy/README.md) -->
 
-  <!-- - [デプロイの概要](./laravel/deploy/deploy-image.md) -->
-  <!-- - [【AWS Cloud9 編】実装したコードを GitHub へ push](./laravel/deploy/cloud9-to-github.md) -->
-  <!-- - [実装したコードを GitHub へ push](./laravel/deploy/docker-to-github.md) -->
-  <!-- - [ローカルからロリポップマネージドクラウドへのログイン](./laravel/deploy/setup-lolipop.md) -->
-  <!-- - [ロリポップマネージドクラウドと GitHub の SSH 通信設定](./laravel/deploy/lolipop-to-github.md) -->
-  <!-- - [GitHub 上のコードをマネージドクラウドにデプロイ](./laravel/deploy/github-to-lolipop.md) -->
+    <!-- - [デプロイの概要](./laravel/deploy/deploy-image.md) -->
+    <!-- - [【AWS Cloud9 編】実装したコードを GitHub へ push](./laravel/deploy/cloud9-to-github.md) -->
+    <!-- - [実装したコードを GitHub へ push](./laravel/deploy/docker-to-github.md) -->
+    <!-- - [ローカルからロリポップマネージドクラウドへのログイン](./laravel/deploy/setup-lolipop.md) -->
+    <!-- - [ロリポップマネージドクラウドと GitHub の SSH 通信設定](./laravel/deploy/lolipop-to-github.md) -->
+    <!-- - [GitHub 上のコードをマネージドクラウドにデプロイ](./laravel/deploy/github-to-lolipop.md) -->
