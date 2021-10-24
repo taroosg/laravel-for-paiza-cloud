@@ -178,29 +178,11 @@
 <li>サーバ作成ボタンクリックしてサーバの準備は完了．</li>
 </ul>
 <p><img src="./img/laravel_paiza_setup_create_server.png" alt="サーバ作成画面" /></p>
-<h2 id="laravel-プロジェクトの作成"><a class="header" href="#laravel-プロジェクトの作成">Laravel プロジェクトの作成</a></h2>
+<h2 id="git-のバージョンアップ"><a class="header" href="#git-のバージョンアップ">Git のバージョンアップ</a></h2>
+<p>バージョンが古いので最新にしておく．</p>
 <p>左側のターミナルをクリックしてターミナルを起動する．</p>
 <p><img src="./img/laravel_paiza_setup_start_terminal.png" alt="ターミナル起動" /></p>
-<p>下記コマンドを実行して Laravel のプロジェクトを作成する．</p>
-<pre><code class="language-bash">$ composer create-project laravel/laravel laratter --prefer-dist
-</code></pre>
-<p>完了したら下記コマンドを実行する．</p>
-<pre><code class="language-bash">$ cd laratter
-$ php artisan serve
-
-# 実行結果
-Starting Laravel development server: http://127.0.0.1:8000
-
-</code></pre>
-<p>左側の「8000」をクリックして Laravel のアプリケーションを立ち上げる．</p>
-<p>下記の画面が表示されれば OK！</p>
-<p><img src="./img/laravel_paiza_setup_start_laravel.png" alt="laravel画面表示" /></p>
-<p>サーバを終了するときは「ctrl + c」を入力する．</p>
-<h2 id="隠しファイルの表示"><a class="header" href="#隠しファイルの表示">隠しファイルの表示</a></h2>
-<p>適当なフォルダ上で右クリックし，「隠しファイルを表示」をクリックする．</p>
-<p><img src="./img/laravel_paiza_setup_show_hidden_files.png" alt="隠しファイル設定" /></p>
-<h2 id="git"><a class="header" href="#git">Git</a></h2>
-<p>バージョンが古いので最新にしておく．</p>
+<p>下記の手順でコマンドを実行し，Git のバージョンを最新にする．</p>
 <pre><code class="language-bash"># Git リポジトリの追加
 $ sudo add-apt-repository ppa:git-core/ppa
 
@@ -236,6 +218,26 @@ $ git --version
 git version 2.33.1
 
 </code></pre>
+<h2 id="laravel-プロジェクトの作成"><a class="header" href="#laravel-プロジェクトの作成">Laravel プロジェクトの作成</a></h2>
+<p>引き続きターミナルで操作を行う．</p>
+<p>下記コマンドを実行して Laravel のプロジェクトを作成する．</p>
+<pre><code class="language-bash">$ composer create-project laravel/laravel laratter --prefer-dist
+</code></pre>
+<p>完了したら下記コマンドを実行する．</p>
+<pre><code class="language-bash">$ cd laratter
+$ php artisan serve
+
+# 実行結果
+Starting Laravel development server: http://127.0.0.1:8000
+
+</code></pre>
+<p>左側の「8000」をクリックして Laravel のアプリケーションを立ち上げる．</p>
+<p>下記の画面が表示されれば OK！</p>
+<p><img src="./img/laravel_paiza_setup_start_laravel.png" alt="laravel画面表示" /></p>
+<p>サーバを終了するときは「<code>ctrl + c</code>」を入力する．</p>
+<h2 id="隠しファイルの表示"><a class="header" href="#隠しファイルの表示">隠しファイルの表示</a></h2>
+<p>適当なフォルダ上で右クリックし，「隠しファイルを表示」をクリックする．</p>
+<p><img src="./img/laravel_paiza_setup_show_hidden_files.png" alt="隠しファイル設定" /></p>
 <h2 id="phpmyadmin"><a class="header" href="#phpmyadmin">phpmyadmin</a></h2>
 <p>左側の「80」をクリックし，アドレスバーに <code>/phpmyadmin</code> を追加して Enter．</p>
 <p>下記画面が表示されれば OK！</p>
