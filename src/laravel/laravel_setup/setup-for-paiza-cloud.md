@@ -18,46 +18,15 @@
 
 ![サーバ作成画面](./img/laravel_paiza_setup_create_server.png)
 
-## Laravel プロジェクトの作成
+## Git のバージョンアップ
+
+バージョンが古いので最新にしておく．
 
 左側のターミナルをクリックしてターミナルを起動する．
 
 ![ターミナル起動](./img/laravel_paiza_setup_start_terminal.png)
 
-下記コマンドを実行して Laravel のプロジェクトを作成する．
-
-```bash
-$ composer create-project laravel/laravel laratter --prefer-dist
-```
-
-完了したら下記コマンドを実行する．
-
-```bash
-$ cd laratter
-$ php artisan serve
-
-# 実行結果
-Starting Laravel development server: http://127.0.0.1:8000
-
-```
-
-左側の「8000」をクリックして Laravel のアプリケーションを立ち上げる．
-
-下記の画面が表示されれば OK！
-
-![laravel画面表示](./img/laravel_paiza_setup_start_laravel.png)
-
-サーバを終了するときは「ctrl + c」を入力する．
-
-## 隠しファイルの表示
-
-適当なフォルダ上で右クリックし，「隠しファイルを表示」をクリックする．
-
-![隠しファイル設定](./img/laravel_paiza_setup_show_hidden_files.png)
-
-## Git
-
-バージョンが古いので最新にしておく．
+下記の手順でコマンドを実行し，Git のバージョンを最新にする．
 
 ```bash
 # Git リポジトリの追加
@@ -95,6 +64,41 @@ $ git --version
 git version 2.33.1
 
 ```
+
+## Laravel プロジェクトの作成
+
+引き続きターミナルで操作を行う．
+
+下記コマンドを実行して Laravel のプロジェクトを作成する．
+
+```bash
+$ composer create-project laravel/laravel laratter --prefer-dist
+```
+
+完了したら下記コマンドを実行する．
+
+```bash
+$ cd laratter
+$ php artisan serve
+
+# 実行結果
+Starting Laravel development server: http://127.0.0.1:8000
+
+```
+
+左側の「8000」をクリックして Laravel のアプリケーションを立ち上げる．
+
+下記の画面が表示されれば OK！
+
+![laravel画面表示](./img/laravel_paiza_setup_start_laravel.png)
+
+サーバを終了するときは「`ctrl + c`」を入力する．
+
+## 隠しファイルの表示
+
+適当なフォルダ上で右クリックし，「隠しファイルを表示」をクリックする．
+
+![隠しファイル設定](./img/laravel_paiza_setup_show_hidden_files.png)
 
 ## phpmyadmin
 
