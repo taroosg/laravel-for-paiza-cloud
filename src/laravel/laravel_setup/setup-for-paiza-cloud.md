@@ -37,6 +37,9 @@ The most current stable version of Git for Ubuntu.
 ...
 W: Some index files failed to download. They have been ignored, or old ones used instead.
 
+```
+
+```bash
 # パッケージのアップデート
 $ sudo apt update
 
@@ -46,6 +49,9 @@ Hit:2 http://ap-northeast-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelea
 ...
 W: Some index files failed to download. They have been ignored, or old ones used instead.
 
+```
+
+```bash
 # Git のインストール
 $ sudo apt install git
 
@@ -57,6 +63,9 @@ Reading state information... Done
 Setting up git (1:2.33.1-0ppa1~ubuntu18.04.1) ...
 Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
 
+```
+
+```bash
 # バージョン確認
 $ git --version
 
