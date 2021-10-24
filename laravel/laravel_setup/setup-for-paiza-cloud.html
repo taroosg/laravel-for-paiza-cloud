@@ -199,6 +199,43 @@ Starting Laravel development server: http://127.0.0.1:8000
 <h2 id="隠しファイルの表示"><a class="header" href="#隠しファイルの表示">隠しファイルの表示</a></h2>
 <p>適当なフォルダ上で右クリックし，「隠しファイルを表示」をクリックする．</p>
 <p><img src="./img/laravel_paiza_setup_show_hidden_files.png" alt="隠しファイル設定" /></p>
+<h2 id="git"><a class="header" href="#git">Git</a></h2>
+<p>バージョンが古いので最新にしておく．</p>
+<pre><code class="language-bash"># Git リポジトリの追加
+$ sudo add-apt-repository ppa:git-core/ppa
+
+# 実行結果（中略）
+The most current stable version of Git for Ubuntu.
+...
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+# パッケージのアップデート
+$ sudo apt update
+
+# 実行結果（中略）
+Hit:1 http://ap-northeast-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://ap-northeast-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+...
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+# Git のインストール
+$ sudo apt install git
+
+# 実行結果（中略）
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+...
+Setting up git (1:2.33.1-0ppa1~ubuntu18.04.1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+
+# バージョン確認
+$ git --version
+
+# 実行結果
+git version 2.33.1
+
+</code></pre>
 <h2 id="phpmyadmin"><a class="header" href="#phpmyadmin">phpmyadmin</a></h2>
 <p>左側の「80」をクリックし，アドレスバーに <code>/phpmyadmin</code> を追加して Enter．</p>
 <p>下記画面が表示されれば OK！</p>

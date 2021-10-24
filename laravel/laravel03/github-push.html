@@ -220,11 +220,6 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbFShwJXqs23OuKYHG9EPbHObzWqO1Lua6m/BC4aVy
 <p>ターミナルに表示された文字列を「ssh-rsa」から全てコピーし，GitHub サイトの入力欄に貼り付ける．タイトルは PC 名など適当につけて OK．
 入力したら「Add key」をクリックして終了．</p>
 <p>※公開鍵は PC 毎にペアを作成するため，どの PC で発行した公開鍵なのか判別できるように名前をつけると良い．</p>
-<!-- ## Gitのバージョンアップ
-
-> 💻 Paiza Cloud ターミナルの操作
-
-クラウド環境のGitはバージョンが古くて困るので新しくする． -->
 <h2 id="git-の設定"><a class="header" href="#git-の設定">Git の設定</a></h2>
 <blockquote>
 <p>💻 Paiza Cloud ターミナルの操作</p>
@@ -239,11 +234,9 @@ $ cd laratter
 $ git config --global user.email &quot;YOUR_GITHUB_EMAIL&quot;
 
 </code></pre>
-<!-- デフォルトブランチを `main` に変更する．
-
-```bash
-$ git config --global init.defaultBranch main
-``` -->
+<p>デフォルトブランチを <code>main</code> に変更する．</p>
+<pre><code class="language-bash">$ git config --global init.defaultBranch main
+</code></pre>
 <h2 id="コミットしてプッシュする"><a class="header" href="#コミットしてプッシュする">コミットしてプッシュする．</a></h2>
 <blockquote>
 <p>🌏 ブラウザの操作</p>
@@ -258,13 +251,8 @@ $ git config --global init.defaultBranch main
 # 実行結果
 Initialized empty Git repository in /home/ubuntu/laratter/.git/
 
-# main ブランチを作成して切り替え
-$ git branch main
-$ git checkout main
 
-# 実行結果
-Switched to branch 'main'
-
+# ファイルを add -&gt; commit する
 $ git add .
 $ git commit -m &quot;init&quot;
 
@@ -278,7 +266,6 @@ $ git commit -m &quot;init&quot;
 
 # リポジトリの URL （SSH）を設定してpushする．
 $ git remote add origin YOUR_REPOSITORY_URL
-
 $ git push origin main
 
 # 実行結果（途中で ` (yes/no)?` と訊かれるので `yes` と入力してEnter）

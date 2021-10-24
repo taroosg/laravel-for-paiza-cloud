@@ -221,6 +221,43 @@ Starting Laravel development server: http://127.0.0.1:8000
 <h2 id="隠しファイルの表示"><a class="header" href="#隠しファイルの表示">隠しファイルの表示</a></h2>
 <p>適当なフォルダ上で右クリックし，「隠しファイルを表示」をクリックする．</p>
 <p><img src="laravel/laravel_setup/./img/laravel_paiza_setup_show_hidden_files.png" alt="隠しファイル設定" /></p>
+<h2 id="git"><a class="header" href="#git">Git</a></h2>
+<p>バージョンが古いので最新にしておく．</p>
+<pre><code class="language-bash"># Git リポジトリの追加
+$ sudo add-apt-repository ppa:git-core/ppa
+
+# 実行結果（中略）
+The most current stable version of Git for Ubuntu.
+...
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+# パッケージのアップデート
+$ sudo apt update
+
+# 実行結果（中略）
+Hit:1 http://ap-northeast-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://ap-northeast-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+...
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+# Git のインストール
+$ sudo apt install git
+
+# 実行結果（中略）
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+...
+Setting up git (1:2.33.1-0ppa1~ubuntu18.04.1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+
+# バージョン確認
+$ git --version
+
+# 実行結果
+git version 2.33.1
+
+</code></pre>
 <h2 id="phpmyadmin"><a class="header" href="#phpmyadmin">phpmyadmin</a></h2>
 <p>左側の「80」をクリックし，アドレスバーに <code>/phpmyadmin</code> を追加して Enter．</p>
 <p>下記画面が表示されれば OK！</p>
@@ -2801,11 +2838,6 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbFShwJXqs23OuKYHG9EPbHObzWqO1Lua6m/BC4aVy
 <p>ターミナルに表示された文字列を「ssh-rsa」から全てコピーし，GitHub サイトの入力欄に貼り付ける．タイトルは PC 名など適当につけて OK．
 入力したら「Add key」をクリックして終了．</p>
 <p>※公開鍵は PC 毎にペアを作成するため，どの PC で発行した公開鍵なのか判別できるように名前をつけると良い．</p>
-<!-- ## Gitのバージョンアップ
-
-> 💻 Paiza Cloud ターミナルの操作
-
-クラウド環境のGitはバージョンが古くて困るので新しくする． -->
 <h2 id="git-の設定"><a class="header" href="#git-の設定">Git の設定</a></h2>
 <blockquote>
 <p>💻 Paiza Cloud ターミナルの操作</p>
@@ -2820,11 +2852,9 @@ $ cd laratter
 $ git config --global user.email &quot;YOUR_GITHUB_EMAIL&quot;
 
 </code></pre>
-<!-- デフォルトブランチを `main` に変更する．
-
-```bash
-$ git config --global init.defaultBranch main
-``` -->
+<p>デフォルトブランチを <code>main</code> に変更する．</p>
+<pre><code class="language-bash">$ git config --global init.defaultBranch main
+</code></pre>
 <h2 id="コミットしてプッシュする"><a class="header" href="#コミットしてプッシュする">コミットしてプッシュする．</a></h2>
 <blockquote>
 <p>🌏 ブラウザの操作</p>
@@ -2839,13 +2869,8 @@ $ git config --global init.defaultBranch main
 # 実行結果
 Initialized empty Git repository in /home/ubuntu/laratter/.git/
 
-# main ブランチを作成して切り替え
-$ git branch main
-$ git checkout main
 
-# 実行結果
-Switched to branch 'main'
-
+# ファイルを add -&gt; commit する
 $ git add .
 $ git commit -m &quot;init&quot;
 
@@ -2859,7 +2884,6 @@ $ git commit -m &quot;init&quot;
 
 # リポジトリの URL （SSH）を設定してpushする．
 $ git remote add origin YOUR_REPOSITORY_URL
-
 $ git push origin main
 
 # 実行結果（途中で ` (yes/no)?` と訊かれるので `yes` と入力してEnter）
