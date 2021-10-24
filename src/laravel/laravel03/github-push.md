@@ -67,12 +67,6 @@ GitHub のサイトにアクセスし，「設定」→「SSH keys」へ進む�
 
 ※公開鍵は PC 毎にペアを作成するため，どの PC で発行した公開鍵なのか判別できるように名前をつけると良い．
 
-<!-- ## Gitのバージョンアップ
-
-> 💻 Paiza Cloud ターミナルの操作
-
-クラウド環境のGitはバージョンが古くて困るので新しくする． -->
-
 ## Git の設定
 
 > 💻 Paiza Cloud ターミナルの操作
@@ -93,11 +87,11 @@ $ git config --global user.email "YOUR_GITHUB_EMAIL"
 
 ```
 
-<!-- デフォルトブランチを `main` に変更する．
+デフォルトブランチを `main` に変更する．
 
 ```bash
 $ git config --global init.defaultBranch main
-``` -->
+```
 
 ## コミットしてプッシュする．
 
@@ -115,13 +109,8 @@ $ git init
 # 実行結果
 Initialized empty Git repository in /home/ubuntu/laratter/.git/
 
-# main ブランチを作成して切り替え
-$ git branch main
-$ git checkout main
 
-# 実行結果
-Switched to branch 'main'
-
+# ファイルを add -> commit する
 $ git add .
 $ git commit -m "init"
 
@@ -135,7 +124,6 @@ $ git commit -m "init"
 
 # リポジトリの URL （SSH）を設定してpushする．
 $ git remote add origin YOUR_REPOSITORY_URL
-
 $ git push origin main
 
 # 実行結果（途中で ` (yes/no)?` と訊かれるので `yes` と入力してEnter）

@@ -55,6 +55,47 @@ Starting Laravel development server: http://127.0.0.1:8000
 
 ![隠しファイル設定](./img/laravel_paiza_setup_show_hidden_files.png)
 
+## Git
+
+バージョンが古いので最新にしておく．
+
+```bash
+# Git リポジトリの追加
+$ sudo add-apt-repository ppa:git-core/ppa
+
+# 実行結果（中略）
+The most current stable version of Git for Ubuntu.
+...
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+# パッケージのアップデート
+$ sudo apt update
+
+# 実行結果（中略）
+Hit:1 http://ap-northeast-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://ap-northeast-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+...
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+# Git のインストール
+$ sudo apt install git
+
+# 実行結果（中略）
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+...
+Setting up git (1:2.33.1-0ppa1~ubuntu18.04.1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+
+# バージョン確認
+$ git --version
+
+# 実行結果
+git version 2.33.1
+
+```
+
 ## phpmyadmin
 
 左側の「80」をクリックし，アドレスバーに `/phpmyadmin` を追加して Enter．
