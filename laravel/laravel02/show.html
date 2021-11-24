@@ -171,8 +171,8 @@
 <p>各 tweet の詳細を取得する処理と表示する画面を作成する．</p>
 <p>一覧画面の tweet 名をクリックすると詳細画面に移動するようにする．</p>
 <p>クリックするとコントローラの<code>show()</code>関数にリクエストを送るように記述している．</p>
-<p><code>resources/views/tweet/index.php</code>を以下のように編集する．</p>
-<pre><code class="language-php">&lt;!-- resources/views/tweet/index.php --&gt;
+<p><code>resources/views/tweet/index.blade.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">&lt;!-- resources/views/tweet/index.blade.php --&gt;
 
 &lt;x-app-layout&gt;
   &lt;x-slot name=&quot;header&quot;&gt;
@@ -230,7 +230,7 @@ public function show($id)
 <p>ここでは，受け取った ID の値でテーブルからデータを取り出し，<code>tweet</code>という名前で<code>show.blade.php</code>に渡している．</p>
 <h2 id="詳細表示画面の作成"><a class="header" href="#詳細表示画面の作成">詳細表示画面の作成</a></h2>
 <p>詳細画面の<code>resources/views/tweet/show.blade.php</code>を以下のように編集する．</p>
-<pre><code class="language-php">&lt;!-- resources/views/tweet/index.php --&gt;
+<pre><code class="language-php">&lt;!-- resources/views/tweet/show.blade.php --&gt;
 
 &lt;x-app-layout&gt;
   &lt;x-slot name=&quot;header&quot;&gt;
