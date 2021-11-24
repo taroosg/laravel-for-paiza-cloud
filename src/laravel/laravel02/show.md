@@ -10,10 +10,10 @@
 
 クリックするとコントローラの`show()`関数にリクエストを送るように記述している．
 
-`resources/views/tweet/index.php`を以下のように編集する．
+`resources/views/tweet/index.blade.php`を以下のように編集する．
 
 ```php
-<!-- resources/views/tweet/index.php -->
+<!-- resources/views/tweet/index.blade.php -->
 
 <x-app-layout>
   <x-slot name="header">
@@ -81,7 +81,7 @@ public function show($id)
 詳細画面の`resources/views/tweet/show.blade.php`を以下のように編集する．
 
 ```php
-<!-- resources/views/tweet/index.php -->
+<!-- resources/views/tweet/show.blade.php -->
 
 <x-app-layout>
   <x-slot name="header">
